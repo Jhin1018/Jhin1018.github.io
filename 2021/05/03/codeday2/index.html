@@ -22,9 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>所有标签 - Voice of Eccentric</title>
+  <title>刷题日记day2 - Voice of Eccentric</title>
+  
+    <meta name="keywords" content="LeetCode">
   
 
+  
+    <meta name="description" content="LeetCode 7">
   
 
   <!-- feed -->
@@ -323,7 +327,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper tag search' style="display: ;">
+        <div id="half" class='cover-wrapper post search' style="display: ;">
           
             <div id='cover-backstretch'></div>
           
@@ -409,23 +413,222 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      <div class='post-wrapper'>
-        <article id="tag" class="post article white-box reveal shadow">
-          <h2>所有标签</h2>
-          <div class="all-tags">
-            
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a><span class="tag-list-count">2</span></li></ul>
-          </div>
-          <br>
+    
+    
+      <h1 class="title">
+        刷题日记day2
+      </h1>
+      <div class='new-meta-box'>
+        
           
-        </article>
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://wangjingse2.oss-cn-shanghai.aliyuncs.com/techblog/avatar2.JPG">
+    <p>Jhin1018</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年5月3日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="刷题日记day2" data-path="/2021/05/03/codeday2/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
       </div>
     
+  </div>
+
+
   
+  
+  <h2 id="每日一题-LeetCode-7-翻转整数"><a href="#每日一题-LeetCode-7-翻转整数" class="headerlink" title="每日一题 LeetCode 7 翻转整数"></a>每日一题 LeetCode 7 翻转整数</h2><p>说实话这个题目太过简单，只需要考虑溢出时的情况，不过这里有趣的是C++溢出时会报错而Java不会，因此java中只需要判断每次乘10加上个位数字后再整除10还等不等于原数的情况，如果不等那就是溢出了，溢出就返回0。</p>
+<p>Code：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public int reverse(int x) &#123;</span><br><span class="line">        int res &#x3D; 0;</span><br><span class="line">        while (x !&#x3D; 0) &#123;</span><br><span class="line">            int tmp &#x3D; res * 10 + x % 10;</span><br><span class="line">            if (tmp &#x2F; 10 !&#x3D; res) &#123; &#x2F;&#x2F; 溢出</span><br><span class="line">                return 0;</span><br><span class="line">            &#125;</span><br><span class="line">            res &#x3D; tmp;</span><br><span class="line">            x &#x2F;&#x3D; 10;</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://jhin1018.github.io/2021/05/03/codeday2/>http://jhin1018.github.io/2021/05/03/codeday2/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-04T00:39:38+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年5月4日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/LeetCode/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>LeetCode</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://jhin1018.github.io/2021/05/03/codeday2/&title=刷题日记day2 - Voice of Eccentric&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://jhin1018.github.io/2021/05/03/codeday2/&title=刷题日记day2 - Voice of Eccentric&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://jhin1018.github.io/2021/05/03/codeday2/&title=刷题日记day2 - Voice of Eccentric&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2021/05/03/codeday1/'>
+          <p class='title'>刷题日记day1 —— LeetCode 554 砖墙<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>每日一题 LeetCode 554思路一最初想法，模拟整个砖墙，用一个二维数组储存整个墙，然后判断各个缝隙。
+123456789101112131415161718192021222324252...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -435,11 +638,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-LeetCode-7-%E7%BF%BB%E8%BD%AC%E6%95%B4%E6%95%B0"><span class="toc-text">每日一题 LeetCode 7 翻转整数</span></a></li></ol>
+    </div>
+  </section>
+
 
   
 
 
 </aside>
+
 
 
 		  
@@ -448,8 +666,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="刷题日记day2";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
