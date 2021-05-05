@@ -430,9 +430,64 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/05/05/codediaryday4/">
+        刷题日记 day4
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        LeetCode 198 House Robber思路比较典型的动态规划题目，主要思路如下。对于第K间屋子，如果不偷它，收益为前K-1间屋子的收益；如果偷它，收益为前K-2间屋子的收益+第K间屋子的收益。于是乎动态转移方程就得到了:
+
+dp[i] =max(dp[i-1],dp[i-2]+nums[i])
+
+同时考虑一下初始条件，如果只有一件屋子，那就是只有这一件屋子的收益；如果有两间屋子，...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img src='https://wangjingse2.oss-cn-shanghai.aliyuncs.com/techblog/avatar2.JPG'></a>
+        
+        <time>2021-05-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/05/05/codediaryday4/'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -683,7 +738,7 @@ LeetCode 206 反转链表面试常考题，上次网易面试里也被考到了�
           <li><a class="flat-box"
             title="/categories/%E6%8A%80%E6%9C%AF/" href="/categories/%E6%8A%80%E6%9C%AF/"
             id="categoriesE68A80E69CAF"
-            ><div class='name'>技术</div><div class='badge'>(3)</div></a></li>
+            ><div class='name'>技术</div><div class='badge'>(4)</div></a></li>
         
       </ul>
     </div>

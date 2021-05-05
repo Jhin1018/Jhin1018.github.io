@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://eccentric.icu/2021/05/05/codediaryday4/</loc>
+    
+    <lastmod>2021-05-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://eccentric.icu/2021/05/04/codediaryday3/</loc>
     
     <lastmod>2021-05-04</lastmod>
@@ -53,7 +60,7 @@
 
   <url>
     <loc>http://eccentric.icu/</loc>
-    <lastmod>2021-05-04</lastmod>
+    <lastmod>2021-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,7 +68,7 @@
   
   <url>
     <loc>http://eccentric.icu/tags/LeetCode/</loc>
-    <lastmod>2021-05-04</lastmod>
+    <lastmod>2021-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -70,7 +77,7 @@
   
   <url>
     <loc>http://eccentric.icu/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2021-05-04</lastmod>
+    <lastmod>2021-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
