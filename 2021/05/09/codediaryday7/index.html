@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,9 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>归档：2021/5 - Voice of Eccentric</title>
+  <title>刷题日记 day7 - Voice of Eccentric</title>
+  
+    <meta name="keywords" content="LeetCode">
   
 
+  
+    <meta name="description" content="LeetCode 1723 and 25">
   
 
   <!-- feed -->
@@ -329,7 +331,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  search' style="display: ;">
+        <div id="half" class='cover-wrapper post search' style="display: ;">
           
             <div id='cover-backstretch'></div>
           
@@ -416,430 +418,226 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
     
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
     
-    <h2 class="article-title" >
-      <a href="/2021/05/09/codediaryday7/">
+      <h1 class="title">
         刷题日记 day7
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>LeetCode 1723 and 25</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      </h1>
+      <div class='new-meta-box'>
         
           
-          <a class='avatar' href='/'><img src='https://wangjingse2.oss-cn-shanghai.aliyuncs.com/techblog/avatar2.JPG'></a>
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="https://wangjingse2.oss-cn-shanghai.aliyuncs.com/techblog/avatar2.JPG">
+    <p>Jhin1018</p>
+  </a>
+</div>
+
+          
         
-        <time>2021-05-09</time>
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+    </a>
+  </div>
+
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年5月9日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="刷题日记 day7" data-path="/2021/05/09/codediaryday7/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <h2 id="LeetCode-1723-Find-Minimum-Time-to-Finish-All-Jobs"><a href="#LeetCode-1723-Find-Minimum-Time-to-Finish-All-Jobs" class="headerlink" title="LeetCode  1723 Find Minimum Time to Finish All Jobs"></a>LeetCode  1723 Find Minimum Time to Finish All Jobs</h2><p>今天的每日一题，体感是hard中也比较难的题目，放个官方题解链接以后再消化吧。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-minimum-time-to-finish-all-jobs/solution/wan-cheng-suo-you-gong-zuo-de-zui-duan-s-hrhu/">官方题解</a></p>
+<h2 id="LeetCode-25-Reverse-Nodes-in-k-Group"><a href="#LeetCode-25-Reverse-Nodes-in-k-Group" class="headerlink" title="LeetCode 25 Reverse Nodes in k-Group"></a>LeetCode 25 Reverse Nodes in k-Group</h2><p>虽然也是hard题，但是面试常考，所以研究一下。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>翻转一个链表并不难，可以看<a href="http://eccentric.icu/2021/05/04/codediaryday3/">day3</a>解反转链表的思路。这道题最复杂的是长度为k的子链表翻转后如何再接回原链表中。首先先来写这个翻转子链表的函数，这个函数和普通的翻转链表没啥不同，只需要考虑几个细节即可。接下来我们就要考虑翻转后的子链表如何接回原链表中。在每次翻转k个节点之前，我们需要一个pre节点来保存子链表的前一个节点，和一个next 节点保存子链表的后一个节点，这样就可以接回去了。那么问题又来了，第一个节点前面没有怎么办？我们就人为的给第一个节点前面加上hair，这样就可以保持整个循环结构中的一致性，而且还有另一个好处，那就是hair.next一直指向这个翻转过的链表的头结点。至此，所有的问题都解决了。</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseKGroup</span><span class="params">(ListNode head, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    ListNode hair= <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">    hair.next = head;</span><br><span class="line">    ListNode pre =hair;<span class="comment">//子链表的前一个节点</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(head !=<span class="keyword">null</span>)&#123;</span><br><span class="line">        ListNode tail = pre;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k;i++)&#123;<span class="comment">//从上一次的尾巴往前走k步，和从head走k-1步一样</span></span><br><span class="line">            tail = tail.next;</span><br><span class="line">            <span class="keyword">if</span>(tail == <span class="keyword">null</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> hair.next;<span class="comment">//最后不足k个不需要翻转</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode next = tail.next;<span class="comment">//子链表的后一个节点</span></span><br><span class="line"></span><br><span class="line">        ListNode[] subchain = myreverse(head,tail);<span class="comment">//子链表翻转</span></span><br><span class="line"></span><br><span class="line">        head = subchain[<span class="number">0</span>];<span class="comment">//翻转后的头</span></span><br><span class="line">        tail = subchain[<span class="number">1</span>];<span class="comment">//翻转后的尾</span></span><br><span class="line">        pre.next = head;<span class="comment">//子链表的前一个节点接上新的头</span></span><br><span class="line">        tail.next = next;<span class="comment">//尾巴接上原本的后一个节点，其实在myreverse函数中已经接好了，这一行可有可无的</span></span><br><span class="line">        pre = tail;<span class="comment">//对于下一个循环中的子链表，这一次的尾巴就是下一次的pre</span></span><br><span class="line">        head = next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> hair.next;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> ListNode[] myreverse(ListNode head,ListNode tail)&#123;</span><br><span class="line">    ListNode prev = tail.next;<span class="comment">//翻转链表中这里是null，而初始的prev表示head在翻转后应指向的节点，所以是tail的next</span></span><br><span class="line">    ListNode cur = head;</span><br><span class="line">    <span class="keyword">while</span>(prev != tail)&#123;<span class="comment">//留意这个循环终止条件，和反转链表不同</span></span><br><span class="line">        ListNode next = cur.next;</span><br><span class="line">        cur.next = prev;</span><br><span class="line">        prev = cur;</span><br><span class="line">        cur = next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ListNode[]&#123;tail,head&#125;;<span class="comment">// 翻转后head和tail互换</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度:O(n)</li>
+<li>空间复杂度:O(1)</li>
+</ul>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2021/05/09/codediaryday7/'>
-            阅读全文
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://eccentric.icu/2021/05/09/codediaryday7/>http://eccentric.icu/2021/05/09/codediaryday7/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
-</div>
 
-          </div>
-        
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/07/codediaryday6/">
-        刷题日记 day6
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>今天刷了不少题，以后还是每天两道三题比较合适。。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-09T12:30:27+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年5月9日</p>
+  </a>
+</div>
+
+        
+      
         
           
-          <a class='avatar' href='/'><img src='https://wangjingse2.oss-cn-shanghai.aliyuncs.com/techblog/avatar2.JPG'></a>
-        
-        <time>2021-05-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/07/codediaryday6/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/LeetCode/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>LeetCode</p></a></div>
 
-</div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/06/codediaryday5/">
-        刷题日记 day5
-      </a>
-    </h2>
-  
-  <div class='md'>
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        LeetCode 1720 Decode XORed Array思路今日每日一题，简单题重拳出击！解码异或数组，其实很简单，只需要知道若a XOR b =c，则c XOR a =b即可，既然encoded[i]=arr[i] XOR arr[i+1],那么arr[i+1] = encoded[i] XOR a[i],即arr[i] = encoded[i-1] XOR arr[i-1]
-Co...
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://eccentric.icu/2021/05/09/codediaryday7/&title=刷题日记 day7 - Voice of Eccentric&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://eccentric.icu/2021/05/09/codediaryday7/&title=刷题日记 day7 - Voice of Eccentric&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://eccentric.icu/2021/05/09/codediaryday7/&title=刷题日记 day7 - Voice of Eccentric&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
       
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://wangjingse2.oss-cn-shanghai.aliyuncs.com/techblog/avatar2.JPG'></a>
-        
-        <time>2021-05-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/06/codediaryday5/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
 </div>
 
-          </div>
+
+
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/05/codediaryday4/">
-        刷题日记 day4
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        LeetCode 198 House Robber思路比较典型的动态规划题目，主要思路如下。对于第K间屋子，如果不偷它，收益为前K-1间屋子的收益；如果偷它，收益为前K-2间屋子的收益+第K间屋子的收益。于是乎动态转移方程就得到了:
-
-dp[i] =max(dp[i-1],dp[i-2]+nums[i])
-
-同时考虑一下初始条件，如果只有一件屋子，那就是只有这一件屋子的收益；如果有两间屋子，...
-      
-    
+    </div>
   </div>
+
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://wangjingse2.oss-cn-shanghai.aliyuncs.com/techblog/avatar2.JPG'></a>
-        
-        <time>2021-05-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-        
-      </div>
+  
+
+  
+    <div class="prev-next">
       
-        <div>
-          <a class='readmore' href='/2021/05/05/codediaryday4/'>
-            阅读全文
-          </a>
-        </div>
+      
+        <a class='next' href='/2021/05/07/codediaryday6/'>
+          <p class='title'>刷题日记 day6<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>LeetCode 1486. XOR Operation in an Array思路今日的每日一题又是简单题，重拳出击！模拟一遍思路即可过，至于题解里面复杂的数学知识我选择无视。
+Code123...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/04/codediaryday3/">
-        刷题日记day3
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        LeetCode 每日一题 1473 粉刷房子 III这道hard的题目，要用到三维dp，对于我现在来说还是太难了，这里放个题解连接后面慢慢消化。
-题解
-LeetCode 206 反转链表面试常考题，上次网易面试里也被考到了，我给了一个用栈来实现的解答，面试官的反馈来看感觉空间复杂度不够满意，今天来学习一下优秀的思路。
-主要的思路就是用三个指针，分别指向当前节点、前一个节点、后一个节点。然后...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://wangjingse2.oss-cn-shanghai.aliyuncs.com/techblog/avatar2.JPG'></a>
-        
-        <time>2021-05-04</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/04/codediaryday3/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/03/codeday2/">
-        刷题日记day2
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>LeetCode 7</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://wangjingse2.oss-cn-shanghai.aliyuncs.com/techblog/avatar2.JPG'></a>
-        
-        <time>2021-05-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/03/codeday2/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/03/codeday1/">
-        刷题日记day1 —— LeetCode 554 砖墙
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>刷题日记Day1</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://wangjingse2.oss-cn-shanghai.aliyuncs.com/techblog/avatar2.JPG'></a>
-        
-        <time>2021-05-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/03/codeday1/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/05/03/hello-world/">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://wangjingse2.oss-cn-shanghai.aliyuncs.com/techblog/avatar2.JPG'></a>
-        
-        <time>2021-05-03</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/05/03/hello-world/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -847,128 +645,28 @@ Qu...
     
     
 
-<section class="widget blogger shadow desktop">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://wangjingse2.oss-cn-shanghai.aliyuncs.com/techblog/avatar2.JPG'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Jhin1018</h2>
-        
-        
-          <p>你觉得我是怪人那就是</p>
 
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:wangjing91018@gmail.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/jhin1018"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%8A%80%E6%9C%AF/" href="/categories/%E6%8A%80%E6%9C%AF/"
-            id="categoriesE68A80E69CAF"
-            ><div class='name'>技术</div><div class='badge'>(7)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#LeetCode-1723-Find-Minimum-Time-to-Finish-All-Jobs"><span class="toc-text">LeetCode  1723 Find Minimum Time to Finish All Jobs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LeetCode-25-Reverse-Nodes-in-k-Group"><span class="toc-text">LeetCode 25 Reverse Nodes in k-Group</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code"><span class="toc-text">Code</span></a></li></ol></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/LeetCode/" style="font-size: 14px; color: #999">LeetCode</a>
-    </div>
-  </section>
-
-
-  
 
   
 
 
 </aside>
+
 
 
 		  
@@ -977,8 +675,8 @@ Qu...
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="刷题日记 day7";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
