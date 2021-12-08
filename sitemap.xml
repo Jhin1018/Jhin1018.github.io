@@ -88,7 +88,7 @@
 
   <url>
     <loc>http://eccentric.icu/</loc>
-    <lastmod>2021-09-28</lastmod>
+    <lastmod>2021-12-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -96,14 +96,14 @@
   
   <url>
     <loc>http://eccentric.icu/tags/LeetCode/</loc>
-    <lastmod>2021-09-28</lastmod>
+    <lastmod>2021-12-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://eccentric.icu/tags/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2021-09-28</lastmod>
+    <lastmod>2021-12-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -112,7 +112,7 @@
   
   <url>
     <loc>http://eccentric.icu/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2021-09-28</lastmod>
+    <lastmod>2021-12-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
