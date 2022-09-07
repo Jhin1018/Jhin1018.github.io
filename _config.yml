@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://eccentric.icu
+url: https://jhin1018.github.io/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -104,7 +104,7 @@ theme: volantis
 deploy:
   type: git
   repo: 
-    github: https://github.com/Jhin1018/Jhin1018.github.io.git,master
+    github: https://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@github.com/Jhin1018/Jhin1018.github.io.git,master
   
 favicon: https://wangjingse2.oss-cn-shanghai.aliyuncs.com/techblog/logo.ico
 
